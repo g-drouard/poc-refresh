@@ -1,0 +1,48 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 60px;
+        margin: 60px 0 40px;
+    }
+
+    .refresh-cards {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    a {
+        padding: 20px;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .trainings {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+
+        mat-progress-bar {
+            height: 10px;
+            margin-bottom: 57px;
+        }
+
+        .training {
+            font-weight: bold;
+            font-size: 24px;
+            padding: 15px;
+            background-color: #c3bce9;
+            border: 4px solid #3f51b5;
+            border-radius: 10px;
+        }
+    }
+}

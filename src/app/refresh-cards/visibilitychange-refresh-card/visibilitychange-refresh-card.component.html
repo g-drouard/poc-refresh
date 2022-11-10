@@ -1,0 +1,15 @@
+<span (click)="selectRefreshEvent('visibilitychange')" [class.selected]="refreshEvent === 'visibilitychange'">{{ eventName }}</span>
+<mat-icon [matBadge]="refreshCount" matBadgeColor="primary">refresh</mat-icon>
+<div class="refreshs">
+    <mat-progress-bar *ngFor="let refresh of refreshs" mode="determinate" [value]="refresh.pourcentage"></mat-progress-bar>
+</div>
+
+<span (click)="selectRefreshEvent('visibilitychangeState')" [class.selected]="refreshEvent === 'visibilitychangeState'">{{ eventName }} + document.visibilityState</span>
+<mat-icon [matBadge]="refreshWithVisibilityStateCount" matBadgeColor="primary">refresh</mat-icon>
+<div class="refreshs">
+    <mat-progress-bar *ngFor="let refresh of refreshsWithVisibilityState" mode="determinate" [value]="refresh.pourcentage"></mat-progress-bar>
+</div>
+
+<div class="event-informations">
+    <a mat-raised-button color="accent" href="https://caniuse.com/?search=visibilitychange" target="_blank">Compatibilité navigateurs</a>
+</div>

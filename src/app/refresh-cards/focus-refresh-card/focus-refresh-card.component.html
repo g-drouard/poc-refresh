@@ -1,0 +1,11 @@
+<ng-container *ngFor="let eventKey of eventKeys">
+    <span (click)="selectRefreshEvent(eventKey)" [class.selected]="refreshEvent === eventKey">{{ eventKey }}</span>
+    <mat-icon [matBadge]="events[eventKey].refreshCount" matBadgeColor="primary">refresh</mat-icon>
+    <div class="refreshs">
+        <mat-progress-bar *ngFor="let refresh of events[eventKey].refreshs" mode="determinate" [value]="refresh.pourcentage"></mat-progress-bar>
+    </div>
+</ng-container>
+
+<div class="event-informations">
+    <a mat-raised-button color="accent" href="https://caniuse.com/?search=focus" target="_blank">Compatibilité navigateurs</a>
+</div>
